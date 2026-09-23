@@ -53,4 +53,4 @@ UPDATE orders SET status = 'Paid' WHERE order_id = 102;
 DELETE FROM orders WHERE order_id = 104;
 
 -- This query is stopped by the UNIQUE constraint used by the 'email' attribute, which makes sure that there can be no duplicate emails inside the 'customers' table.
--- Running this particular query without any condition may result in the deletion of the entire 'orders' table.
+-- Running this particular query without using condition may result in the deletion of the entire 'orders' table.
