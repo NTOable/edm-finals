@@ -1,6 +1,0 @@
-CREATE TABLE customers (
-customer_id INTEGER PRIMARY KEY,
-name TEXT NOT NULL,
-email TEXT UNIQUE,
-city TEXT,
-created_on DATE DEFAULT CURRENT_DATE );
