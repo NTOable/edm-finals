@@ -5,4 +5,4 @@ order_date DATE,
 amount REAL,
 status TEXT DEFAULT 'Pending',
 FOREIGN KEY (customer_id)
-REFERENCES customers(customer_id));
+REFERENCES customers(customer_id) );
