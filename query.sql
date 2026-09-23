@@ -33,6 +33,7 @@ INSERT INTO customers (customer_id, name, email, city, contact_no) VALUES (5, 'A
 INSERT INTO orders (order_id, customer_id, order_date, amount, status) VALUES (102, 1, '2026-09-29', '250', 'Pending');
 INSERT INTO orders (order_id, customer_id, order_date, amount, status) VALUES (111, 1, '2026-09-27', '900', 'Pending');
 INSERT INTO orders (order_id, customer_id, order_date, amount, status) VALUES (112, 1, '2026-09-31', '1200', 'Serving');
+INSERT INTO customers (customer_id, name, email, city, contact_no) VALUES (6, 'Meek', '', 'Danny', '15374347');
 
 SELECT * FROM customers;
 SELECT name, city FROM customers;
@@ -51,5 +52,5 @@ UPDATE customers SET city = 'Denver Metro' WHERE customer_id = 4;
 UPDATE orders SET status = 'Paid' WHERE order_id = 102;
 DELETE FROM orders WHERE order_id = 104;
 
--- This query is 
+-- This query is stopped by the UNIQUE constraint used by the 'email' attribute, which makes sure that there can be no duplicate emails inside the 'customers' table.
 -- Running this particular query without any condition may result in the deletion of the entire 'orders' table.
